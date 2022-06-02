@@ -47,12 +47,12 @@ trait HasPermissions
      * @param $permission
      *
      * @return bool
-     */
+
     public function cannot(string $permission,$arguments = []): bool
     {
         return !$this->can($permission);
     }
-
+*/
     /**
      * Check if user is administrator.
      *
