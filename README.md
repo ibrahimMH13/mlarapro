@@ -13,7 +13,7 @@ Installation
 First, install laravel 5.5 and up, and make sure that the database connection settings are correct.
 
 ```
-composer require ibrhaim13/larapro
+composer require ibrhaim13/mlarapro
 ```
 
 Then run these commands to publish assets and config：

@@ -14,9 +14,8 @@ use Illuminate\Support\Facades\Storage;
  *
  * @property Role[] $roles
  */
-class Administrator extends Model implements AuthenticatableContract
+class Administrator extends Model implements Authenticatable
 {
-    use Authenticatable;
     use HasPermissions;
     use DefaultDatetimeFormat;
 
