@@ -1,8 +1,8 @@
 {
-    "name": "ibrhaim13/larapro",
-    "description": "laravel admin panel",
+    "name": "ibrhaim13/mlarapro",
+    "description": "laravel admin panel base mongodb",
     "type": "library",
-    "keywords": ["laravel", "admin", "grid", "form"],
+    "keywords": ["laravel", "admin", "grid", "form","mongodb"],
     "homepage": "https://github.com/ibrhaim13/larapro.git",
     "license": "MIT",
     "authors": [
