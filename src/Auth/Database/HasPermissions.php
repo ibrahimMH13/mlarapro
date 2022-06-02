@@ -48,7 +48,7 @@ trait HasPermissions
      *
      * @return bool
      */
-    public function cannot(string $permission): bool
+    public function cannot(string $permission,$arguments = []): bool
     {
         return !$this->can($permission);
     }
