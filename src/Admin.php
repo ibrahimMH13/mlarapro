@@ -306,13 +306,12 @@ class Admin
      */
     public function routes($attr = ['prefix' => '', 'middleware' => ''])
     {
-        $prefix = empty($attr['prefix']) ? $attr['prefix'] : config('admin.route.prefix');
-        $middleware = empty($attr['middleware']) ? $attr['middleware'] : config('admin.route.middleware');
+        $prefix     = empty($attr['prefix']) ? config('admin.route.prefix') : $attr['prefix'] ;
+        $middleware = empty($attr['middleware']) ? config('admin.route.middleware') : $attr['middleware'];
         $attributes = [
             'prefix' => $prefix,
             'middleware' => $middleware,
         ];
-
         app('router')->group($attributes, function ($router) {
 
             /* @var \Illuminate\Support\Facades\Route $router */
