@@ -81,7 +81,7 @@ class Menu extends Model
             $query->with('roles');
         }
 
-        return $query->selectRaw('*, '.$orderColumn.' ROOT')->orderByRaw($byOrder)->get()->toArray();
+        return $query->orderBy($byOrder)->get()->toArray();
     }
 
     /**
