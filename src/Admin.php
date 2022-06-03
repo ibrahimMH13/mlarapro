@@ -91,7 +91,7 @@ class Admin
      *
      * @return \ibrhaim13\Admin\Form
      *
-     *  @deprecated since v1.6.1
+     * @deprecated since v1.6.1
      */
     public function form($model, Closure $callable)
     {
@@ -304,11 +304,13 @@ class Admin
      *
      * @return void
      */
-    public function routes()
+    public function routes($attr = ['prefix' => '', 'middleware' => ''])
     {
+        $prefix = empty($attr['prefix']) ? $attr['prefix'] : config('admin.route.prefix');
+        $middleware = empty($attr['middleware']) ? $attr['middleware'] : config('admin.route.middleware');
         $attributes = [
-            'prefix'     => config('admin.route.prefix'),
-            'middleware' => config('admin.route.middleware'),
+            'prefix' => $prefix,
+            'middleware' => $middleware,
         ];
 
         app('router')->group($attributes, function ($router) {
@@ -332,11 +334,11 @@ class Admin
             $authController = config('admin.auth.controller', AuthController::class);
 
             /* @var \Illuminate\Routing\Router $router */
-            $router->get('auth/login', $authController.'@getLogin')->name('admin.login');
-            $router->post('auth/login', $authController.'@postLogin');
-            $router->get('auth/logout', $authController.'@getLogout')->name('admin.logout');
-            $router->get('auth/setting', $authController.'@getSetting')->name('admin.setting');
-            $router->put('auth/setting', $authController.'@putSetting');
+            $router->get('auth/login', $authController . '@getLogin')->name('admin.login');
+            $router->post('auth/login', $authController . '@postLogin');
+            $router->get('auth/logout', $authController . '@getLogout')->name('admin.logout');
+            $router->get('auth/setting', $authController . '@getSetting')->name('admin.setting');
+            $router->put('auth/setting', $authController . '@putSetting');
         });
     }
 

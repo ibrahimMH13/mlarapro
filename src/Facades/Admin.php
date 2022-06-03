@@ -27,7 +27,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static void booting(\Closure $builder)
  * @method static void booted(\Closure $builder)
  * @method static void bootstrap()
- * @method static void routes()
+ * @method static void routes($attr = ['prefix' => '', 'middleware' => ''])
  *
  * @see \Ibrhaim13\Admin\Admin
  */
