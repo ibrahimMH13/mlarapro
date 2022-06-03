@@ -306,8 +306,10 @@ class Admin
      */
     public function routes($attr = ['prefix' => '', 'middleware' => ''])
     {
-        $prefix     = empty($attr['prefix']) ? config('admin.route.prefix') : $attr['prefix'] ;
-        $middleware = empty($attr['middleware']) ? config('admin.route.middleware') : $attr['middleware'];
+        $prefixConfig = config('admin.route.prefix');
+        $middlewareConfig = config('admin.route.middleware');
+        $prefix     = empty($attr['prefix']) ? config('admin.route.prefix') : $attr['prefix'].'/'.$prefixConfig ;
+        $middleware = empty($attr['middleware']) ? config('admin.route.middleware') : $attr['middleware'].'/'.$middlewareConfig;
         $attributes = [
             'prefix' => $prefix,
             'middleware' => $middleware,
