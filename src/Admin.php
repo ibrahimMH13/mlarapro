@@ -309,7 +309,7 @@ class Admin
         $prefixConfig = config('admin.route.prefix');
         $middlewareConfig = config('admin.route.middleware');
         $prefix     = empty($attr['prefix']) ? config('admin.route.prefix') : $attr['prefix'].'/'.$prefixConfig ;
-        $middleware = empty($attr['middleware']) ? config('admin.route.middleware') : $attr['middleware'].'/'.$middlewareConfig;
+        $middleware = empty($attr['middleware']) ? config('admin.route.middleware') : $middlewareConfig;
         $attributes = [
             'prefix' => $prefix,
             'middleware' => $middleware,
