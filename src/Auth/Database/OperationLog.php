@@ -24,6 +24,11 @@ class OperationLog extends Model
         'LINK', 'UNLINK', 'COPY', 'HEAD', 'PURGE',
     ];
 
+    public function getRouteKeyName()
+    {
+        return '_id';
+    }
+
     /**
      * Create a new Eloquent model instance.
      *

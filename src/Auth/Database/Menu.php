@@ -59,6 +59,12 @@ class Menu extends Model
         return $this->belongsToMany($relatedModel, $pivotTable, 'menu_id', 'role_id');
     }
 
+    public function getRouteKeyName()
+    {
+        return '_id';
+    }
+
+
     /**
      * @return array
      */

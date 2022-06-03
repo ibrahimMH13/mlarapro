@@ -37,6 +37,11 @@ class Administrator extends  Authenticatable
         parent::__construct($attributes);
     }
 
+    public function getRouteKeyName()
+    {
+        return '_id';
+    }
+
     /**
      * Get avatar attribute.
      *

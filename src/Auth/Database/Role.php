@@ -28,6 +28,11 @@ class Role extends Model
         parent::__construct($attributes);
     }
 
+    public function getRouteKeyName()
+    {
+        return '_id';
+    }
+
     /**
      * A role belongs to many users.
      *
